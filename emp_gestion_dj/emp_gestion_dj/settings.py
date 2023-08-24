@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'emp_gestion_dj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'emp_gestion',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.oracle', 
+        'NAME': 'orcl',
+        'USER': 'hr',
+        'HOST': 'localhost',
+        'PASSWORD': 'hr',        # Or an IP Address that your DB is hosted on
+        'PORT': '1521',
     }
 }
 
