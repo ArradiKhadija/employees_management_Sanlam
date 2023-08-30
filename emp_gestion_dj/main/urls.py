@@ -1,13 +1,13 @@
 from django.urls import path, include, re_path
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
-from .views import EmployeeViewSet
-
+from .views import *
 ##auth
 from . import views
 
 router =routers.DefaultRouter()
 router.register(r'employee',EmployeeViewSet)
+router.register(r'tribes',TribeViewSet)
 
 #http://localhost/employee/1
 urlpatterns=[

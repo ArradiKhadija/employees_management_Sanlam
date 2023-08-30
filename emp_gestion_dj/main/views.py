@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, status
-from .serializers import EmployeeSerializer, UserSerializer
-from .models import Employee
+from .serializers import *
+from .models import *
 
 ###auth
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
@@ -16,6 +16,10 @@ from django.shortcuts import get_object_or_404
 class EmployeeViewSet(viewsets.ModelViewSet):
     serializer_class    =EmployeeSerializer
     queryset = Employee.objects.all().order_by('-id')
+
+class TribeViewSet(viewsets.ModelViewSet):
+    serializer_class    =TribeSerializer
+    queryset = Tribe.objects.all().order_by('-id_trb')
 
 ###auth
 @api_view(['POST'])
