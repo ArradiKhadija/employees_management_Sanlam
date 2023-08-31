@@ -8,6 +8,7 @@ from . import views
 router =routers.DefaultRouter()
 router.register(r'employee',EmployeeViewSet)
 router.register(r'tribes',TribeViewSet)
+router.register(r'vacation',VacationViewSet)
 
 #http://localhost/employee/1
 urlpatterns=[

@@ -19,3 +19,12 @@ class TribeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tribe
         fields = ('id_trb', 'intitule_trb', 'resp_trb')
+
+
+class VacationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Vacation
+        fields = ('id_vac', 'emp_vac', 'emp_vac_post','start_vac','end_vac','nbr_jour_vac')
+
+
+

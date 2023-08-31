@@ -21,6 +21,11 @@ class TribeViewSet(viewsets.ModelViewSet):
     serializer_class    =TribeSerializer
     queryset = Tribe.objects.all().order_by('-id_trb')
 
+class VacationViewSet(viewsets.ModelViewSet):
+    serializer_class    =VacationSerializer
+    queryset = Vacation.objects.all().order_by('-id_vac')
+
+
 ###auth
 @api_view(['POST'])
 def login(request):

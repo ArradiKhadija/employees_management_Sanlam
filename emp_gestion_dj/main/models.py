@@ -19,3 +19,14 @@ class Tribe(models.Model):
 
     def __str__(self):
         return self.intitulé_trb
+
+class Vacation(models.Model):
+    id_vac = models.AutoField(primary_key=True)
+    emp_vac = models.CharField(max_length=200)
+    emp_vac_post = models.CharField(max_length=200)
+    start_vac=models.DateField()
+    end_vac=models.DateField()
+    nbr_jour_vac=models.IntegerField()
+
+    def __str__(self):
+        return self.id_vac
