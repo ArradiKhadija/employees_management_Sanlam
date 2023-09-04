@@ -9,7 +9,7 @@ class Employee(models.Model):
     adresse = models.TextField()
 
     def __str__(self):
-        return self.nomComplet
+        return str(self.id)
 
 #creer en oracle sous forme de table: main_tribe
 class Tribe(models.Model):
@@ -22,11 +22,13 @@ class Tribe(models.Model):
 
 class Vacation(models.Model):
     id_vac = models.AutoField(primary_key=True)
-    emp_vac = models.CharField(max_length=200)
-    emp_vac_post = models.CharField(max_length=200)
+    id_emp_vac = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)# on_delete nous permet de supprimer tous les congés si un employée est supprimé cascade****
+    type_vac=models.CharField(max_length=200, null=True)    
     start_vac=models.DateField()
     end_vac=models.DateField()
-    nbr_jour_vac=models.IntegerField()
+    duration_vac=models.IntegerField()
+    reason_vac=models.CharField(max_length=200, null=True)
+    approbateur_vac=models.CharField(max_length=200)
 
     def __str__(self):
         return self.id_vac

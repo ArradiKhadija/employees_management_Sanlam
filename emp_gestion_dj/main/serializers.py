@@ -24,7 +24,6 @@ class TribeSerializer(serializers.ModelSerializer):
 class VacationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vacation
-        fields = ('id_vac', 'emp_vac', 'emp_vac_post','start_vac','end_vac','nbr_jour_vac')
-
+        fields = ('id_vac', 'id_emp_vac','type_vac','start_vac','end_vac','duration_vac','reason_vac','approbateur_vac')
 
 
