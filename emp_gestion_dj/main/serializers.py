@@ -8,7 +8,7 @@ import cx_Oracle
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employee
-        fields = ('id', 'nomComplet', 'email', 'contact', 'adresse')
+        fields = ('id', 'nomComplet', 'email', 'contact', 'adresse','poste','salaire')
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

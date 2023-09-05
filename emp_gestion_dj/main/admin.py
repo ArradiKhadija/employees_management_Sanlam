@@ -4,7 +4,7 @@ from .models import *
 #here we attach models to admin
 
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display= ['id','nomComplet','email','contact','adresse']
+    list_display= ['id','nomComplet','email','contact','adresse','poste']
 admin.site.register(Employee,EmployeeAdmin)
 
 class VacationAdmin(admin.ModelAdmin):

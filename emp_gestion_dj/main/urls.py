@@ -9,6 +9,7 @@ router =routers.DefaultRouter()
 router.register(r'employee',EmployeeViewSet)
 router.register(r'tribes',TribeViewSet)
 router.register(r'vacation',VacationViewSet)
+#router.register(r'signup', views.signup)
 
 #http://localhost/employee/1
 urlpatterns=[
